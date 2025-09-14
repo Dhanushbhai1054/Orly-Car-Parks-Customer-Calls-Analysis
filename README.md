@@ -143,14 +143,4 @@ This project delivers a **scalable solution** for COCD call optimization:
 - Proposes **20–30% reduction** in polluting calls  
 - Ready for **real data integration**  
 
----
 
-## 🤝 Contributing
-Feel free to **fork this repo**, open issues, or submit pull requests.  
-
-📧 Contact: *your.email@example.com*  
-
----
-
-## 📜 License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
