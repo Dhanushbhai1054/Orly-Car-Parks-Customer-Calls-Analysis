@@ -25,76 +25,18 @@ The COCD handles a high volume of calls, many of which are recurring issues (e.g
 - **PostgreSQL & pgAdmin:** Database management and SQL querying.
 - **Power BI Desktop:** Dashboards with conditional formatting and DAX.
 
-## Installation
-### Prerequisites
-- Python 3.9+
-- PostgreSQL (with pgAdmin)
-- Power BI Desktop
-- Required Python packages: `pandas`, `numpy`, `statsmodels`, `sqlalchemy`
-
-
-### Configure PostgreSQL
-- Create database: **orly_calls_db**  
-- Credentials:  
-  - **User:** postgres  
-  - **Password:** 1054851  
-  - **Host:** localhost  
-  - **Port:** 5432  
-- Update `db_config.py` if different  
- 
-
----
-
-## 🚀 Usage
-
-### 1. Generate and Load Data
-```bash
-python scripts/generate_data.py
-```
-Creates `orly_call_data.csv` and loads data to PostgreSQL.  
-
-### 2. Perform Analysis
-```bash
-python scripts/analyze_data.py
-```
-Generates `daily_calls.csv`, `forecast.csv`, and `crosstab.csv`.  
-
-### 3. Load Summary Tables
-```bash
-python scripts/load_tables.py
-```
-Populates `daily_summary`, `forecast_summary`, and `reason_location_crosstab` tables.  
-
-### 4. Build Power BI Dashboard
-- Open `Orly_COCD_Dashboard.pbix`  
-- Or connect Power BI to `orly_calls_db` (DirectQuery mode)  
-- Customize visuals (heatmaps, forecast line, etc.)  
-
----
-
-## 📂 Project Structure
-```
-orly-calls-analysis/
-│
-├── data/                     # Generated CSVs
-├── scripts/                  # Python scripts
-│   ├── generate_data.py      # Data generation & DB load
-│   ├── analyze_data.py       # Aggregations & forecasting
-│   └── load_tables.py        # Load summary tables
-├── db_config.py               # Database connection settings
-├── requirements.txt           # Python dependencies
-├── Orly_COCD_Dashboard.pbix   # Power BI file
-├── README.md                  # Documentation
-└── LICENSE                    # License info
-```
-
----
-
 ## 📊 Prediction Model
 - **Model:** ARIMA(1,1,1)  
 - **Why:** Simple, interpretable for short-term forecasting  
 - **Forecast:** 7 days (Sep 14–20, 2025)  
 - **Result:** Predicted drop from **379 (Sep 13)** → **345 (Sep 14)**, stabilizing around **334 calls/day**  
+
+---
+
+### Build Power BI Dashboard
+- Open `Orly_COCD_Dashboard.pbix`  
+- Or connect Power BI to `orly_calls_db` (DirectQuery mode)  
+- Customize visuals (heatmaps, forecast line, etc.)  
 
 ---
 
