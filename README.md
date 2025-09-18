@@ -33,11 +33,6 @@ The COCD handles a high volume of calls, many of which are recurring issues (e.g
 - Required Python packages: `pandas`, `numpy`, `statsmodels`, `sqlalchemy`
 
 
-### Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
 ### Configure PostgreSQL
 - Create database: **orly_calls_db**  
 - Credentials:  
@@ -46,9 +41,7 @@ pip install -r requirements.txt
   - **Host:** localhost  
   - **Port:** 5432  
 - Update `db_config.py` if different  
-
-### Install Power BI Desktop
-👉 [Download here](https://powerbi.microsoft.com/desktop)  
+ 
 
 ---
 
@@ -113,6 +106,12 @@ orly-calls-analysis/
 - **Hotspots:** P1–P3 (75% of calls)  
 - **Peak:** Sep 13 (379 calls)  
 - **Weekend Share:** 34%  
+<img width="1421" height="803" alt="image" src="https://github.com/user-attachments/assets/a158525d-8535-4763-97f3-d59fc475cd30" />
+
+<img width="1409" height="793" alt="image" src="https://github.com/user-attachments/assets/e2ab0f1e-3e20-4e01-895f-a55db220accc" />
+
+<img width="1404" height="793" alt="image" src="https://github.com/user-attachments/assets/4fde3ee2-2d51-4e91-910e-3fd8c5c54ba1" />
+
 
 ### Heatmap Example (Reason × Location)
 | Reason              | P1  | P2  | P3  | P4  | P5  |
